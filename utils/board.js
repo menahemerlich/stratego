@@ -19,7 +19,7 @@ export function deployTroops(board, displayBoard, soldiers) {
         }
     }
     index = Math.floor(Math.random() * board.length)
-    board[0][index] = Math.floor(Math.random() * 10)
+    board[0][index] = Math.floor(Math.random() * 9) + 1
     displayBoard[0][index] = 'V'
 }
 
