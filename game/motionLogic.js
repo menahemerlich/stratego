@@ -40,7 +40,6 @@ export function motionLogic(board, position) {
 
 export function updatePosition(board, position, newPosition) {
     let soldier = board[position[0]][position[1]]
-    console.log(soldier);
     
     board[position[0]][position[1]] = '_'
     board[newPosition[0]][[newPosition[1]]] = soldier

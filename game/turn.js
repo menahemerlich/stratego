@@ -10,15 +10,17 @@ export function turn(board, displayBoard, position, newPosition){
         updatePosition(displayBoard,position,newPosition)
     }else if(decision == "b"){
         board[position[0]][position[1]] = '_'
+        displayBoard[position[0]][position[1]] = '_'
     }else if(decision == "draw"){
         board[position[0]][position[1]] = '_'
         board[newPosition[0]][newPosition[1]] = '_'
         displayBoard[position[0]][position[1]] = '_'
         displayBoard[newPosition[0]][newPosition[1]] = '_'
-    }else{
+    }else if(decision == "win"){
         updatePosition(board,position,newPosition)
         updatePosition(displayBoard,position,newPosition)
-        return false
+        return true
+        
     }
     }else{
         updatePosition(board, position, newPosition)
@@ -26,4 +28,5 @@ export function turn(board, displayBoard, position, newPosition){
         
     }
     console.table(displayBoard);
+    return false
 }
