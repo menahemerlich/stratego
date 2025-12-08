@@ -19,13 +19,7 @@ export function deployTroops(board, displayBoard, soldiers) {
         }
     }
     index = Math.floor(Math.random() * board.length)
-    board[0][index] = Math.floor(Math.random() * 8) + 1
-    displayBoard[0][index] = 'V'
+    let soldier = Math.floor(Math.random() * 8) + 1
+    board[0][index] = soldier
+    displayBoard[0][index] = soldier
 }
-
-
-const board = creatBoard(10)
-const displayBoard = creatBoard(10)
-deployTroops(board, displayBoard, [1, 2, 3, 4, 5, 6, 7, 8, 9, 'flag']);
-console.table(board);
-console.table(displayBoard);
