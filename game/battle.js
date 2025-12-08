@@ -1,4 +1,4 @@
-function battle(board,Soldier_a,Soldier_b){
+export function battle(board,Soldier_a,Soldier_b){
     if(board[Soldier_a].rank == 9 && board[Soldier_b].rank == 1){
         console.log(board[Soldier_b].playername ,board[Soldier_b].rank ,"win" ,board[Soldier_a].playername ,board[Soldier_a].rank);
         return "b"

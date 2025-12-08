@@ -1,5 +1,12 @@
+import {motionLogic,updatePosition} from "../game/motionLogic.js"
+import {battle} from "../game/battle.js"
+import input from "analiza-sync";
+import {creatBoard} from "../utils/board.js"
+
+
+
 function turn(board){
-    display(board)
+    // display(board)
     position = input("Choose a soldier")
     let choice = motionLogic(board,position)
     if(!(isempty(board,choice))){
@@ -14,6 +21,7 @@ function turn(board){
     }else{
         return false
     }
-    display(board)
+    // display(board)
     }
 }
+turn(creatBoard())
