@@ -1,5 +1,4 @@
 import input from 'analiza-sync';
-import { creatBoard, deployTroops } from '../utils/board.js';
 
 export function isInBoard(board, position) {
     if (board[position[0]] && board[position[0]][position[1]]) {
@@ -9,7 +8,7 @@ export function isInBoard(board, position) {
 }
 
 export function isEmpty(board, position) {
-    if (board[position[0]][position[1]] === '_') {
+    if (board[position[0]] && board[position[0]][position[1]] === '_') {
         return true
     }
     return false
@@ -41,6 +40,8 @@ export function motionLogic(board, position) {
 
 export function updatePosition(board, position, newPosition) {
     let soldier = board[position[0]][position[1]]
+    console.log(soldier);
+    
     board[position[0]][position[1]] = '_'
     board[newPosition[0]][[newPosition[1]]] = soldier
 }

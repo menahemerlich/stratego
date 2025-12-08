@@ -19,7 +19,7 @@ export function deployTroops(board, displayBoard, soldiers) {
         }
     }
     index = Math.floor(Math.random() * board.length)
-    let soldier = Math.floor(Math.random() * 8) + 1
+    let soldier = {rank: Math.floor(Math.random() * 8) + 1, playerName: 'p2'}
     board[0][index] = soldier
-    displayBoard[0][index] = soldier
+    displayBoard[0][index] = soldier.rank
 }
