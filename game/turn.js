@@ -13,6 +13,8 @@ export function turn(board, displayBoard, position, newPosition){
     }else if(decision == "draw"){
         board[position[0]][position[1]] = '_'
         board[newPosition[0]][newPosition[1]] = '_'
+        displayBoard[position[0]][position[1]] = '_'
+        displayBoard[newPosition[0]][newPosition[1]] = '_'
     }else{
         updatePosition(board,position,newPosition)
         updatePosition(displayBoard,position,newPosition)
