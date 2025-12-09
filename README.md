@@ -18,5 +18,4 @@ Game instructions: The player must enter two digits each turn
                     The second digit represents the column
                     The system then presents the player with his move options
                     The player must enter the number of the option he chose
-
-                    If the player enters incorrect values, he will be asked to enter them again and again until he enters correct values.
+If the player enters incorrect values, he will be asked to enter them again and again until he enters correct values.
