@@ -21,9 +21,15 @@ deployTroops(board, displayBoard, soldiers);
 console.log(board);
 console.table(displayBoard);
 let play = false
+let position = []
 while (!(play)) {
-    
-    let position = input("Choose a soldier: ").split(' ').map(Number)
+    while (!(position.length === 2 
+        && Number.isInteger(position[0]) 
+        && Number.isInteger(position[1]) 
+        && isInBoard(board, position) 
+        && !(isEmpty(displayBoard, position)))) {
+        position = input("Choose a soldier: ").split(' ').map(Number)
+    }
     let newPosition =  motionLogic(board, position);
     play = turn(board, displayBoard, position, newPosition)
     

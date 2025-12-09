@@ -34,7 +34,11 @@ export function motionLogic(board, position) {
     for (let i = 0; i < motuonOptions.length; i++) {
         console.log(`${i + 1}: ${motuonOptions[i]}`);
     }
-    let choice = input('Your choice: ')
+    let choice = 0
+    while (!(Number(choice) > 0 && Number(choice) <= motuonOptions.length)) {
+        
+        choice = input('Your choice: ')
+    }
     return motuonOptions[choice - 1]
 }
 
