@@ -23,6 +23,12 @@ export function isAssociated(board, position, option) {
     return false
 }
 
+export function isMovable(board, position){
+    if (board[position[0]] && (board[position[0]][position[1]].rank === 'boom' || board[position[0]][position[1]].rank === 'flag')) {
+        return false
+    }return true
+}
+
 export function motionLogic(board, position) {
     const options = [[position[0], position[1] + 1], [position[0], position[1] - 1], [position[0] + 1, position[1]], [position[0] - 1, position[1]]]
     let motuonOptions = []
@@ -30,16 +36,19 @@ export function motionLogic(board, position) {
         if (isInBoard(board, option) && isAssociated(board, position, option)) {
             motuonOptions.push(option)
         }
-    } console.log('Motuon Options:');
+    } 
+    if (motuonOptions.length > 0) {
+    console.log('Motuon Options:');
     for (let i = 0; i < motuonOptions.length; i++) {
         console.log(`${i + 1}: ${motuonOptions[i]}`);
     }
     let choice = 0
-    while (!(Number(choice) > 0 && Number(choice) <= motuonOptions.length)) {
         
-        choice = input('Your choice: ')
-    }
-    return motuonOptions[choice - 1]
+        while (!(Number(choice) > 0 && Number(choice) <= motuonOptions.length )) {
+            choice = input('Your choice: ')
+        }
+        return motuonOptions[choice - 1]
+    }return 0
 }
 
 export function updatePosition(board, position, newPosition) {

@@ -7,19 +7,22 @@ export function creatBoard(boardSize = 10, fill = '_') {
     return board
 }
 
-export function deployTroops(board, displayBoard, soldiers) {
+export function deployTroops(board, displayBoard, soldiers, ch = 'X', start) {
     let index = null
     while (soldiers.length > 0) {
-        for (let i = 0; i < board.length; i++) {
-            index = Math.floor(Math.random() * board.length)
-            if (board[board.length -1][index] == '_') {
-                board[board.length -1][index] = soldiers.pop();
-                displayBoard[board.length -1][index] = 'X'
+        for (let row = 0; row < 4; row++) {
+            for (let i = 0; i < board.length; i++) {
+                index = Math.floor(Math.random() * board.length)                
+                if (board[start - row][index] == '_') {
+                    let soldier = soldiers.pop()
+                    board[start - row][index] = soldier
+                    if (soldier.playerName === 'p1'){
+                        displayBoard[start - row][index] = ch
+                    }else{
+                        displayBoard[start - row][index] = soldier.rank
+                    }
+                }
             }
         }
-    }
-    index = Math.floor(Math.random() * board.length)
-    let soldier = {rank: Math.floor(Math.random() * 8) + 1, playerName: 'p2'}
-    board[0][index] = soldier
-    displayBoard[0][index] = soldier.rank
+    }   
 }
