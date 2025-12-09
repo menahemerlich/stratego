@@ -10,11 +10,14 @@ const soldiersAI = shuffle(creatSoldiersList(soldersAmout, 'AI'))
 
 deployTroops(board, displayBoard, soldiersP, 'X', board.length - 1);
 deployTroops(board, displayBoard, soldiersAI, '⭕', 3);
-
+console.table(board);
 console.table(displayBoard);
-let play = false
+let win = false
 let position = []
-while (!(play)) {
-    playRun(board, displayBoard, position, 'p1', play)
-    playRun(board, displayBoard, position, 'AI', play)
-}  
+while (!(win)) {
+    win = playRun(board, displayBoard, position, 'p1')
+    console.log(win);
+    
+    win = playRun(board, displayBoard, position, 'AI')
+}  console.log(win);
+

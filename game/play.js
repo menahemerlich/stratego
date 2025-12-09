@@ -3,7 +3,8 @@ import { isInBoard, isEmpty, motionLogic, isMovable} from './motionLogic.js';
 import { turn } from './turn.js';
 
 
-export function playRun(board, displayBoard, position, playerName, play){
+export function playRun(board, displayBoard, position, playerName){
+    let win = false
     let flag = true
     console.log(playerName);
     while (flag) {
@@ -25,9 +26,10 @@ export function playRun(board, displayBoard, position, playerName, play){
             let newPosition =  motionLogic(board, position, playerName);
             if (newPosition != 0) {
                 
-                play = turn(board, displayBoard, position, newPosition)
+                win = turn(board, displayBoard, position, newPosition)
                 flag = false
             }else{position = []} 
         }else{position = []} 
     }
+    return win
 }
