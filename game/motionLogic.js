@@ -29,7 +29,7 @@ export function isMovable(board, position){
     }return true
 }
 
-export function motionLogic(board, position) {
+export function motionLogic(board, position, playerName = 'AI') {
     const options = [[position[0], position[1] + 1], [position[0], position[1] - 1], [position[0] + 1, position[1]], [position[0] - 1, position[1]]]
     let motuonOptions = []
     for (const option of options) {
@@ -38,6 +38,7 @@ export function motionLogic(board, position) {
         }
     } 
     if (motuonOptions.length > 0) {
+    console.log(`the position: ${position}`);
     console.log('Motuon Options:');
     for (let i = 0; i < motuonOptions.length; i++) {
         console.log(`${i + 1}: ${motuonOptions[i]}`);
@@ -45,8 +46,13 @@ export function motionLogic(board, position) {
     let choice = 0
         
         while (!(Number(choice) > 0 && Number(choice) <= motuonOptions.length )) {
-            choice = input('Your choice: ')
+            if (playerName === 'AI') {
+                choice = Math.floor(Math.random() * 4)
+            }else{choice = input('Your choice: ')}
+            
         }
+        console.log(`the choice: ${choice}`);
+        
         return motuonOptions[choice - 1]
     }return 0
 }
