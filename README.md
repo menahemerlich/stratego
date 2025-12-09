@@ -7,7 +7,7 @@ Description: Simulates a Stratego game
 install:
  
 `npm init -y` 
-`npm install analiza-sync`
+                        `npm install analiza-sync`
 
 (Change the type to: module)
 
