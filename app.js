@@ -9,7 +9,7 @@ const soldiersP = shuffle(creatSoldiersList(soldersAmout, 'p1'))
 const soldiersAI = shuffle(creatSoldiersList(soldersAmout, 'AI'))
 
 deployTroops(board, displayBoard, soldiersP, 'X', board.length - 1);
-deployTroops(board, displayBoard, soldiersAI, 'O', 3);
+deployTroops(board, displayBoard, soldiersAI, '⭕', 3);
 
 console.table(displayBoard);
 let play = false
