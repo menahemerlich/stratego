@@ -16,8 +16,10 @@ let win = false
 let position = []
 while (!(win)) {
     win = playRun(board, displayBoard, position, 'p1')
-    console.log(win);
+    if (!(win)) {
+        
+        win = playRun(board, displayBoard, position, 'AI')
+    }  
+    }
     
-    win = playRun(board, displayBoard, position, 'AI')
-}  console.log(win);
 
