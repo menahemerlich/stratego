@@ -16,7 +16,7 @@ export function deployTroops(board, displayBoard, soldiers, ch = 'X', start) {
                 if (board[start - row][index] == '_') {
                     let soldier = soldiers.pop()
                     board[start - row][index] = soldier
-                    if (soldier.playerName === 'p1'){
+                    if (soldier.playerName === 'AI'){
                         displayBoard[start - row][index] = ch
                     }else{
                         displayBoard[start - row][index] = soldier.rank
