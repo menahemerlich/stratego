@@ -10,23 +10,14 @@ const board = creatBoard(10)
 
 const displayBoard = creatBoard(10)
 const soldiers = [{ rank: 1 , playerName: 'p1'}, { rank: 2, playerName: 'p1' }, 
-<<<<<<< HEAD
-    { rank: 3, playerName: 'p1' }, { rank: 4, playerName: 'p1' } ,
-    { rank: 5, playerName: 'p1' }, { rank: 6, playerName: 'p1' }, 
-    { rank: 7, playerName: 'p1' }, { rank: 8, playerName: 'p1' },
-    { rank: 9, playerName: 'p1' }, { rank: 'flag', playerName: 'p1' }]
-
-    deployTroops(board, displayBoard, soldiers);
-=======
-    { rank: 3, playerName: 'p1' }, 
-    { rank: 4, playerName: 'p1' },
-    { rank: 5, playerName: 'p1' }, { rank: 6, playerName: 'p1' }, 
-    { rank: 7, playerName: 'p1' }, { rank: 8, playerName: 'p1' },
-    { rank: 9, playerName: 'p1' }, 
-    { rank: 'flag', playerName: 'p1' }
+                  { rank: 3, playerName: 'p1' }, 
+                  { rank: 4, playerName: 'p1' },
+                  { rank: 5, playerName: 'p1' }, { rank: 6, playerName: 'p1' }, 
+                  { rank: 7, playerName: 'p1' }, { rank: 8, playerName: 'p1' },
+                  { rank: 9, playerName: 'p1' }, 
+                  { rank: 'flag', playerName: 'p1' }
 ]
 deployTroops(board, displayBoard, soldiers);
->>>>>>> afae368df4cdd06cbd4d405907841930e0272315
 console.log(board);
 console.table(displayBoard);
 let play = false

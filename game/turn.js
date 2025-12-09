@@ -29,9 +29,6 @@ export function turn(board, displayBoard, position, newPosition){
         
     }
     console.table(displayBoard);
-<<<<<<< HEAD
-}
-=======
+
     return false
 }
->>>>>>> afae368df4cdd06cbd4d405907841930e0272315
