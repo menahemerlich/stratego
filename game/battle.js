@@ -1,3 +1,4 @@
+
 export function battle(board,position,newPosition){
     if(board[position[0]][position[1]].rank == 9 && board[newPosition[0]][newPosition[1]].rank == 1){
         console.log(`rank ${board[position[0]][position[1]].playerName}: ${board[position[0]][position[1]].rank}`);
@@ -27,8 +28,14 @@ export function battle(board,position,newPosition){
         console.log(`rank ${board[position[0]][position[1]].playerName}: ${board[position[0]][position[1]].rank}`);
         console.log(`rank ${board[newPosition[0]][newPosition[1]].playerName}: ${board[newPosition[0]][newPosition[1]].rank}`);
         console.log(`${board[position[0]][position[1]].playerName} (${board[position[0]][position[1]].rank}) is the winner!!`);
-        return "win" 
+        return "win"
 
+    }else if(board[position[0]][position[1]].rank != 3 && board[newPosition[0]][newPosition[1]].rank == "boom"){ 
+        console.log(`rank ${board[position[0]][position[1]].playerName}: ${board[position[0]][position[1]].rank}`);
+        console.log(`rank ${board[newPosition[0]][newPosition[1]].playerName}: ${board[newPosition[0]][newPosition[1]].rank}`);
+        console.log(`${board[newPosition[0]][newPosition[1]].playerName} (${board[newPosition[0]][newPosition[1]].rank}) win ${board[position[0]][position[1]].playerName} (${board[position[0]][position[1]].rank})`);
+        return "b"
+        
     }else{
         console.log(`rank ${board[position[0]][position[1]].playerName}: ${board[position[0]][position[1]].rank}`);
         console.log(`rank ${board[newPosition[0]][newPosition[1]].playerName}: ${board[newPosition[0]][newPosition[1]].rank}`);

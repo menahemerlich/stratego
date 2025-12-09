@@ -50,6 +50,7 @@ const soldiersP = [
     { rank: 28, playerName: 'p1' },
     { rank: 29, playerName: 'p1' }, 
     { rank: '2flag', playerName: 'p1' }
+
 ]
 
 const soldiersAI = [

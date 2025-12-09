@@ -1,3 +1,4 @@
+
 import input from 'analiza-sync';
 import { isInBoard, isAssociated, isEmpty, motionLogic, updatePosition } from './motionLogic.js';
 import { battle } from './battle.js';
@@ -28,5 +29,6 @@ export function turn(board, displayBoard, position, newPosition){
         
     }
     console.table(displayBoard);
+
     return false
 }
