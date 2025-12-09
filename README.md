@@ -1,12 +1,15 @@
-"# stratego" 
+# stratego
 
 Description: Simulates a Stratego game
             The player takes a turn and the computer takes a turn after him
             The one who reaches the flag first wins
 
-install: npm init -y 
-    Change the type to: module
-install: npm install analiza-sync
+install:
+ 
+npm init -y 
+npm install analiza-sync
+
+(Change the type to: module)
 
 run: node app.js
 
