@@ -1,3 +1,4 @@
+
 export function battle(board,position,newPosition){
     if(board[position[0]][position[1]].rank == 9 && board[newPosition[0]][newPosition[1]].rank == 1){
         console.log(`rank ${board[position[0]][position[1]].playerName}: ${board[position[0]][position[1]].rank}`);
