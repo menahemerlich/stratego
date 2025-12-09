@@ -34,13 +34,16 @@ export function motionLogic(board, position) {
     for (let i = 0; i < motuonOptions.length; i++) {
         console.log(`${i + 1}: ${motuonOptions[i]}`);
     }
-    let choice = input('Your choice: ')
+    let choice = 0
+    while (!(Number(choice) > 0 && Number(choice) <= motuonOptions.length)) {
+        
+        choice = input('Your choice: ')
+    }
     return motuonOptions[choice - 1]
 }
 
 export function updatePosition(board, position, newPosition) {
     let soldier = board[position[0]][position[1]]
-    console.log(soldier);
     
     board[position[0]][position[1]] = '_'
     board[newPosition[0]][[newPosition[1]]] = soldier
