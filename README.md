@@ -8,6 +8,8 @@ install:
  
 `npm init -y` 
 
+`npm install analiza-sync`
+
 (Change the type to: module)
 
 run: node app.js
@@ -20,4 +22,3 @@ Game instructions: The player must enter two digits each turn
 If the player enters incorrect values, he will be asked to enter them again and again until he enters correct values.
 
 
-`npm install analiza-sync`
