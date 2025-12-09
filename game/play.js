@@ -9,7 +9,7 @@ export function playRun(board, displayBoard, position, playerName, play){
     while (flag) {
         while (!(position.length === 2 
             && Number.isInteger(position[0]) 
-            && Number.isInteger(position[1]) 
+            && Number.isInteger(position[1])
             && isInBoard(board, position) 
             && !(isEmpty(displayBoard, position))
             && (isMovable(board, position)))

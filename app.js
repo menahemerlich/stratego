@@ -18,4 +18,3 @@ while (!(play)) {
     playRun(board, displayBoard, position, 'p1', play)
     playRun(board, displayBoard, position, 'AI', play)
 }  
-
