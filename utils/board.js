@@ -7,7 +7,7 @@ export function creatBoard(boardSize = 10, fill = '_') {
     return board
 }
 
-export function deployTroops(board, displayBoard, soldiers, ch = 'X', start) {
+export function deployTroops(board, displayBoard, soldiers, ch = 'O', start) {
     let index = null
     while (soldiers.length > 0) {
         for (let row = 0; row < 4; row++) {
