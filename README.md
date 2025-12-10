@@ -6,14 +6,16 @@ Description: Simulates a Stratego game
 
 install:
  
-`npm init -y `
+```
+npm init -y
+```
  
 `npm install analiza-sync`
 
 
 (Change the type to: module)
 
-run: node app.js
+run: `node app.js`
 
 Game instructions: The player must enter two digits each turn
 
