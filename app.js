@@ -10,7 +10,7 @@ const soldiersAI = shuffle(creatSoldiersList(soldersAmout, 'AI'))
 
 deployTroops(board, displayBoard, soldiersP, 'X', board.length - 1);
 deployTroops(board, displayBoard, soldiersAI, '⭕', 3);
-console.table(board);
+
 console.table(displayBoard);
 let win = false
 let position = []
